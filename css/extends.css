@@ -1,9 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --white: #ffffff;
   --gray: #d9d9d9;
   --black: #000000;
   --primary-color: #5f85b8;
-  --secondary-color: #393b3d;
+  --secondary-color: #ffffff;
   --dark-secondary-color: #3c415c;
   --tertiary-color: #a6b1e1;
   --light-tertiary-color: #f3f6fb;
@@ -11,18 +17,34 @@
   --font-family: 'DM Sans', sans-serif;
 }
 
+.light{
+  display: block
+}
+.dark{
+  display: none
+}
+
 @media (prefers-color-scheme: dark) {
+  .light{
+    display: none
+  }
+  .dark{
+    display: block
+  }
   :root {
     --white: #121212;
     --gray: #282828;
     --black: #f0f0f0;
     --primary-color: #ffffff;
-    --secondary-color: #c0c0c0;
+    --secondary-color: #121212;
     --dark-secondary-color: #b0b0b0;
     --tertiary-color: #464646;
     --light-tertiary-color: #2c2c2c;
-    --text-color: #e0e0e0;
+    --text-color: #'e0e0e0';
   }
+
+
+  
 
   /* Ajuste da barra de rolagem para o tema escuro */
   ::-webkit-scrollbar {
@@ -605,4 +627,30 @@ footer .footer__links a:hover {
   footer .footer__container {
     text-align: center;
   }
+}
+
+
+@media (prefers-color-scheme: ligth) {
+  .ligth{
+    display: block;
+  }
+
+  .dark{
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .ligth{
+    display: none;
+  }
+
+  .dark{
+    display: block;
+  }
+}
+
+
+img{
+  max-width: 414px;
 }
